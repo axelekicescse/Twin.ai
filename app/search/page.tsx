@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useMemo, useState } from 'react'
+import { Suspense, useEffect, useMemo, useState } from 'react'
 import Sidebar from '@/components/Sidebar'
 import ThemeToggle from '@/components/ThemeToggle'
 import PersonaCard from '@/components/PersonaCard'
@@ -8,7 +8,7 @@ import { Menu } from 'lucide-react'
 import { personas } from '@/lib/personas'
 import { useSearchParams } from 'next/navigation'
 
-export default function SearchPage() {
+function SearchPageContent() {
   const params = useSearchParams()
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const [searchQuery, setSearchQuery] = useState('')
@@ -83,5 +83,21 @@ export default function SearchPage() {
         </main>
       </div>
     </div>
+  )
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-white dark:bg-gray-900 flex">
+          <div className="flex-1 flex items-center justify-center text-sm text-gray-500 dark:text-gray-400">
+            Loading…
+          </div>
+        </div>
+      }
+    >
+      <SearchPageContent />
+    </Suspense>
   )
 }
