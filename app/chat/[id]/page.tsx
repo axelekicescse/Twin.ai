@@ -103,12 +103,89 @@ export default function ChatPage() {
   const handleImageAttach = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
     if (!file) return
-    const reader = new FileReader()
-    reader.onloadend = () => {
-      const result = reader.result as string
-      setAttachedImage(result)
+
+    const readAsDataUrl = (blob: Blob) =>
+      new Promise<string>((resolve, reject) => {
+        const reader = new FileReader()
+        reader.onloadend = () => resolve(String(reader.result || ''))
+        reader.onerror = () => reject(new Error('Failed to read image'))
+        reader.readAsDataURL(blob)
+      })
+
+    const downscaleImage = async (input: File) => {
+      // Keep this conservative: large phone photos can be huge.
+      const maxDim = 1024
+      const quality = 0.82
+
+      const objectUrl = URL.createObjectURL(input)
+      try {
+        const img = new Image()
+        img.decoding = 'async'
+        img.src = objectUrl
+        await new Promise<void>((resolve, reject) => {
+          img.onload = () => resolve()
+          img.onerror = () => reject(new Error('Failed to decode image'))
+        })
+
+        const w = img.naturalWidth || img.width
+        const h = img.naturalHeight || img.height
+        if (!w || !h) throw new Error('Invalid image dimensions')
+
+        const scale = Math.min(1, maxDim / Math.max(w, h))
+        const outW = Math.max(1, Math.round(w * scale))
+        const outH = Math.max(1, Math.round(h * scale))
+
+        const canvas = document.createElement('canvas')
+        canvas.width = outW
+        canvas.height = outH
+        const ctx = canvas.getContext('2d')
+        if (!ctx) throw new Error('Canvas not supported')
+        ctx.drawImage(img, 0, 0, outW, outH)
+
+        const blob: Blob = await new Promise((resolve, reject) => {
+          canvas.toBlob(
+            (b) => (b ? resolve(b) : reject(new Error('Failed to compress image'))),
+            'image/jpeg',
+            quality
+          )
+        })
+
+        return { blob, dataUrl: await readAsDataUrl(blob) }
+      } finally {
+        URL.revokeObjectURL(objectUrl)
+      }
     }
-    reader.readAsDataURL(file)
+
+    ;(async () => {
+      try {
+        // Always try to downscale (best for mobile).
+        const { dataUrl } = await downscaleImage(file)
+
+        // Guardrail: reject extremely large payloads even after compression.
+        // ~2.5MB base64 string threshold (approx) to avoid huge requests.
+        if (dataUrl.length > 2_500_000) {
+          setTokenError('Image is too large. Please choose a smaller image or take a lower-resolution photo.')
+          setAttachedImage(null)
+          return
+        }
+
+        setAttachedImage(dataUrl)
+      } catch (err) {
+        console.warn('Image compression failed, falling back to original', err)
+        try {
+          const original = await readAsDataUrl(file)
+          if (original.length > 2_500_000) {
+            setTokenError('Image is too large. Please choose a smaller image or take a lower-resolution photo.')
+            setAttachedImage(null)
+            return
+          }
+          setAttachedImage(original)
+        } catch {
+          setTokenError('Could not attach image. Please try another photo.')
+          setAttachedImage(null)
+        }
+      }
+    })()
   }
 
 
