@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "stars": {
+    "naval": { "forbiddenTopics": [], "promoHooks": [] },
+    "mrbeast": { "forbiddenTopics": [], "promoHooks": [] },
+    "ishowspeed": { "forbiddenTopics": [], "promoHooks": [] },
+    "dream": { "forbiddenTopics": [], "promoHooks": [] },
+    "donald_trump": { "forbiddenTopics": [], "promoHooks": [] },
+    "joe_biden": { "forbiddenTopics": [], "promoHooks": [] }
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "stars": {
+    "naval": {
+      "youtubeChannelId": null,
+      "feeds": []
+    },
+    "mrbeast": {
+      "youtubeChannelId": null,
+      "feeds": []
+    },
+    "ishowspeed": {
+      "youtubeChannelId": null,
+      "feeds": []
+    },
+    "dream": {
+      "youtubeChannelId": null,
+      "feeds": []
+    },
+    "donald_trump": {
+      "youtubeChannelId": null,
+      "feeds": []
+    },
+    "joe_biden": {
+      "youtubeChannelId": null,
+      "feeds": []
+    }
+  }
+}

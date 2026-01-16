@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "creators": [
+    {
+      "id": "naval",
+      "displayName": "Naval Ravikant",
+      "knownAs": ["Naval"],
+      "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/5/55/Naval_Ravikant_%28cropped%29.jpg",
+      "avatarFallback": {
+        "letter": "N",
+        "gradient": "from-sky-500 to-indigo-600"
+      },
+      "bioShort": "Entrepreneur and investor; co-founder and chairman of AngelList. Writes and speaks about startups, wealth, and happiness.",
+      "tags": ["entrepreneur", "investor", "startups", "philosophy"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Naval_Ravikant",
+        "website": "https://nav.al/",
+        "x": "https://x.com/naval",
+        "instagram": "https://www.instagram.com/naval/"
+      },
+      "fanCount": null,
+      "sources": [
+        {
+          "label": "Wikipedia (image)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/5/55/Naval_Ravikant_%28cropped%29.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mrbeast",
+      "displayName": "MrBeast",
+      "knownAs": ["Jimmy Donaldson"],
+      "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/MrBeast_2023_%28cropped%29.jpg/500px-MrBeast_2023_%28cropped%29.jpg",
+      "avatarFallback": {
+        "letter": "M",
+        "gradient": "from-amber-500 to-rose-500"
+      },
+      "bioShort": "YouTuber and entrepreneur known for high-production challenges and large-scale philanthropy.",
+      "tags": ["youtube", "creator", "philanthropy", "entrepreneur"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/MrBeast",
+        "youtube": "https://www.youtube.com/@MrBeast",
+        "x": "https://x.com/MrBeast",
+        "instagram": "https://www.instagram.com/mrbeast/"
+      },
+      "fanCount": null,
+      "sources": [
+        {
+          "label": "Wikipedia (image)",
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/MrBeast_2023_%28cropped%29.jpg/500px-MrBeast_2023_%28cropped%29.jpg"
+        }
+      ]
+    },
+    {
+      "id": "ishowspeed",
+      "displayName": "IShowSpeed",
+      "knownAs": ["Darren Watkins Jr."],
+      "avatarImage": null,
+      "avatarFallback": {
+        "letter": "S",
+        "gradient": "from-fuchsia-500 to-violet-600"
+      },
+      "bioShort": "YouTuber and livestreamer known for energetic, dramatic streaming and IRL content.",
+      "tags": ["streamer", "youtube", "gaming", "irl"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/IShowSpeed",
+        "youtube": "https://www.youtube.com/channel/UCWsDFcIhY2DBi3GB5uykGXA",
+        "instagram": "https://www.instagram.com/ishowspeed/"
+      },
+      "fanCount": null,
+      "sources": [
+        {
+          "label": "Creator Registry",
+          "url": "https://eozq2v1buy7eipb.m.pipedream.net"
+        }
+      ]
+    },
+    {
+      "id": "dream",
+      "displayName": "Dream",
+      "knownAs": [],
+      "avatarImage": null,
+      "avatarFallback": {
+        "letter": "D",
+        "gradient": "from-emerald-500 to-teal-600"
+      },
+      "bioShort": "YouTuber, streamer, and musician known for Minecraft content and the Minecraft Manhunt series.",
+      "tags": ["youtube", "minecraft", "gaming"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Dream_(YouTuber)",
+        "youtube": "https://www.youtube.com/c/Dream",
+        "twitch": "https://www.twitch.tv/Dream",
+        "instagram": "https://www.instagram.com/dreamwastaken/",
+        "x": "https://x.com/dream"
+      },
+      "fanCount": null,
+      "sources": []
+    },
+    {
+      "id": "donald_trump",
+      "displayName": "Donald Trump",
+      "knownAs": [],
+      "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/56/Donald_Trump_official_portrait.jpg/512px-Donald_Trump_official_portrait.jpg",
+      "avatarFallback": {
+        "letter": "D",
+        "gradient": "from-slate-500 to-slate-700"
+      },
+      "bioShort": "American businessman and politician; 45th (2017–2021) and 47th (2025–present) president of the United States.",
+      "tags": ["politics", "business"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Donald_Trump",
+        "x": "https://x.com/realDonaldTrump",
+        "website": "https://www.donaldjtrump.com/",
+        "tiktok": null,
+        "instagram": null
+      },
+      "fanCount": null,
+      "sources": [
+        {
+          "label": "Wikimedia Commons (official portrait)",
+          "url": "https://commons.wikimedia.org/wiki/File:Donald_Trump_official_portrait.jpg"
+        }
+      ]
+    },
+    {
+      "id": "joe_biden",
+      "displayName": "Joe Biden",
+      "knownAs": [],
+      "avatarImage": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Joe_Biden_presidential_portrait.jpg/512px-Joe_Biden_presidential_portrait.jpg",
+      "avatarFallback": {
+        "letter": "J",
+        "gradient": "from-blue-500 to-cyan-600"
+      },
+      "bioShort": "American politician who served as the 46th president of the United States (2021–2025).",
+      "tags": ["politics"],
+      "socials": {
+        "wikipedia": "https://en.wikipedia.org/wiki/Joe_Biden",
+        "website": "https://bidenwhitehouse.archives.gov/administration/president-biden/",
+        "x": "https://x.com/JoeBiden",
+        "instagram": "https://www.instagram.com/joebiden/"
+      },
+      "fanCount": null,
+      "sources": [
+        {
+          "label": "Wikimedia Commons (official portrait)",
+          "url": "https://commons.wikimedia.org/wiki/File:Joe_Biden_presidential_portrait.jpg"
+        }
+      ]
+    }
+  ]
+}
+

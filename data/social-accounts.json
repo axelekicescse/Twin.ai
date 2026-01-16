@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "stars": {
+    "naval": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    },
+    "mrbeast": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    },
+    "ishowspeed": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    },
+    "dream": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    },
+    "donald_trump": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    },
+    "joe_biden": {
+      "youtubeChannelId": null,
+      "xUserId": null,
+      "instagramUserId": null
+    }
+  }
+}

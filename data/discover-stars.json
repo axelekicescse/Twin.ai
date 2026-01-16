@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "stars": [
+    { "id": "naval", "name": "Naval Ravikant", "category": "Tech", "tagline": "Entrepreneur & investor", "avatar": "/avatars/Naval_Ravikant_(cropped).jpg" },
+    { "id": "mrbeast", "name": "MrBeast", "category": "Creators", "tagline": "Challenges & philanthropy", "avatar": "/avatars/MrBeast_2023_(cropped).jpg.webp" },
+    { "id": "ishowspeed", "name": "IShowSpeed", "category": "Creators", "tagline": "Streamer", "avatar": "/avatars/IShowSpeed_at_Chinatown_(Portrait)_04.jpg.webp" },
+    { "id": "dream", "name": "Dream", "category": "Creators", "tagline": "Minecraft creator", "avatar": "/avatars/dream.jpg" },
+    { "id": "donald_trump", "name": "Donald Trump", "category": "Politics", "tagline": "Public figure", "avatar": "/avatars/Official_Presidential_Portrait_of_President_Donald_J._Trump_(2025).jpg.webp" },
+    { "id": "joe_biden", "name": "Joe Biden", "category": "Politics", "tagline": "Public figure", "avatar": "/avatars/Joe_Biden_presidential_portrait.jpg.webp" },
+
+    { "id": "taylor_swift", "name": "Taylor Swift", "category": "Music", "tagline": "Singer-songwriter", "avatar": null },
+    { "id": "the_weeknd", "name": "The Weeknd", "category": "Music", "tagline": "Artist", "avatar": null },
+    { "id": "dua_lipa", "name": "Dua Lipa", "category": "Music", "tagline": "Artist", "avatar": null },
+    { "id": "bad_bunny", "name": "Bad Bunny", "category": "Music", "tagline": "Artist", "avatar": null },
+    { "id": "drake", "name": "Drake", "category": "Music", "tagline": "Artist", "avatar": null },
+    { "id": "billie_eilish", "name": "Billie Eilish", "category": "Music", "tagline": "Artist", "avatar": null },
+
+    { "id": "lebron_james", "name": "LeBron James", "category": "Sports", "tagline": "Basketball", "avatar": null },
+    { "id": "lionel_messi", "name": "Lionel Messi", "category": "Sports", "tagline": "Football", "avatar": null },
+    { "id": "cristiano_ronaldo", "name": "Cristiano Ronaldo", "category": "Sports", "tagline": "Football", "avatar": null },
+    { "id": "serena_williams", "name": "Serena Williams", "category": "Sports", "tagline": "Tennis", "avatar": null },
+    { "id": "simone_biles", "name": "Simone Biles", "category": "Sports", "tagline": "Gymnastics", "avatar": null },
+
+    { "id": "conor_mcgregor", "name": "Conor McGregor", "category": "Fighters", "tagline": "MMA", "avatar": null },
+    { "id": "israel_adesanya", "name": "Israel Adesanya", "category": "Fighters", "tagline": "MMA", "avatar": null },
+    { "id": "jon_jones", "name": "Jon Jones", "category": "Fighters", "tagline": "MMA", "avatar": null },
+    { "id": "francis_ngannou", "name": "Francis Ngannou", "category": "Fighters", "tagline": "MMA", "avatar": null },
+    { "id": "tyson_fury", "name": "Tyson Fury", "category": "Fighters", "tagline": "Boxing", "avatar": null },
+
+    { "id": "zendaya", "name": "Zendaya", "category": "Film", "tagline": "Actor", "avatar": null },
+    { "id": "timothee_chalamet", "name": "Timothée Chalamet", "category": "Film", "tagline": "Actor", "avatar": null },
+    { "id": "margot_robbie", "name": "Margot Robbie", "category": "Film", "tagline": "Actor", "avatar": null },
+    { "id": "ryan_gosling", "name": "Ryan Gosling", "category": "Film", "tagline": "Actor", "avatar": null },
+
+    { "id": "elon_musk", "name": "Elon Musk", "category": "Tech", "tagline": "Entrepreneur", "avatar": null },
+    { "id": "sam_altman", "name": "Sam Altman", "category": "Tech", "tagline": "Entrepreneur", "avatar": null },
+    { "id": "mark_zuckerberg", "name": "Mark Zuckerberg", "category": "Tech", "tagline": "Entrepreneur", "avatar": null }
+  ]
+}

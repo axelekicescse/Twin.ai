@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "stars": {
+    "naval": {
+      "cards": {
+        "common_question:dealing_with_depression": {
+          "title": "How to deal with depression in life",
+          "topic_key": "dealing_with_depression",
+          "bucket": "common_question",
+          "count": 1,
+          "last_seen": "2026-01-16T08:39:52.890Z",
+          "score": 85
+        },
+        "common_question:feelings_of_loneliness": {
+          "title": "Thoughts about loneliness",
+          "topic_key": "feelings_of_loneliness",
+          "bucket": "common_question",
+          "count": 1,
+          "last_seen": "2026-01-16T08:57:10.372Z",
+          "score": 80
+        },
+        "opportunity:sharing_artwork": {
+          "title": "Sharing latest drawing",
+          "topic_key": "sharing_artwork",
+          "bucket": "opportunity",
+          "count": 1,
+          "last_seen": "2026-01-16T09:23:07.529Z",
+          "score": 70
+        },
+        "opportunity:custom_stream_deck_icons": {
+          "title": "Custom icon for Elgato stream deck",
+          "topic_key": "custom_stream_deck_icons",
+          "bucket": "opportunity",
+          "count": 1,
+          "last_seen": "2026-01-16T09:32:32.389Z",
+          "score": 75
+        }
+      },
+      "sources": {
+        "common_question:dealing_with_depression": [
+          {
+            "id": "e51437b7b770b628f11a1db422c989ee9ce4fc63",
+            "ts": "2026-01-16T08:39:52.890Z",
+            "text": "what to do in life because of depression man",
+            "conversationHref": null
+          }
+        ],
+        "common_question:feelings_of_loneliness": [
+          {
+            "id": "a44500075e0c185c9df6b98882abdffccd5fb36b",
+            "ts": "2026-01-16T08:57:10.372Z",
+            "text": "what do you think about loneliness ?",
+            "conversationHref": null
+          }
+        ],
+        "opportunity:sharing_artwork": [
+          {
+            "id": "6146a8a01ca834b59871a3f4fe2ace91a649167e",
+            "ts": "2026-01-16T09:23:07.529Z",
+            "text": "bro have you see my latest draw ??",
+            "conversationHref": null
+          }
+        ],
+        "opportunity:custom_stream_deck_icons": [
+          {
+            "id": "c4b15750e7027df00730cb2dac84d4837f5f4590",
+            "ts": "2026-01-16T09:32:32.389Z",
+            "text": "it s an icone for my elgato stream deck, did it myslef ahah",
+            "conversationHref": null
+          }
+        ]
+      },
+      "processedMessageIds": [
+        "e51437b7b770b628f11a1db422c989ee9ce4fc63",
+        "a44500075e0c185c9df6b98882abdffccd5fb36b",
+        "6146a8a01ca834b59871a3f4fe2ace91a649167e",
+        "ff8afd9fe2b756068219d65793cc13e367626932",
+        "c4b15750e7027df00730cb2dac84d4837f5f4590",
+        "f10a72d2d72d60db2a2f62cc9b2cd7bdfa618c3b"
+      ]
+    }
+  }
+}

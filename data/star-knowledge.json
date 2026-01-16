@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "stars": {
+    "naval": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "x",
+          "date": "2026-01-12",
+          "text": "Most people confuse motion with progress. Clarity comes from subtraction.",
+          "url": "https://x.com/naval/status/1"
+        },
+        {
+          "platform": "website",
+          "date": "2026-01-09",
+          "text": "A short note on reading: go for breadth early, depth later.",
+          "url": "https://nav.al/reading"
+        },
+        {
+          "platform": "other",
+          "date": "2026-01-03",
+          "text": "Podcast clip: on building leverage without losing peace.",
+          "url": "https://example.com/naval-clip"
+        }
+      ]
+    },
+    "mrbeast": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "youtube",
+          "date": "2026-01-14",
+          "text": "I Survived 100 Hours In The World's Most Expensive Room",
+          "url": "https://www.youtube.com/watch?v=mrbeast_latest"
+        },
+        {
+          "platform": "x",
+          "date": "2026-01-11",
+          "text": "If you want to win on YouTube, obsess over retention. Everything else is secondary.",
+          "url": "https://x.com/mrbeast/status/1"
+        },
+        {
+          "platform": "instagram",
+          "date": "2026-01-08",
+          "text": "Behind the scenes: the set took weeks. Worth it.",
+          "url": "https://instagram.com/p/mrbeast_latest"
+        }
+      ]
+    },
+    "ishowspeed": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "youtube",
+          "date": "2026-01-13",
+          "text": "I Tried The HARDEST Speedrun Challenge (I lost my mind)",
+          "url": "https://www.youtube.com/watch?v=ishowspeed_latest"
+        },
+        {
+          "platform": "x",
+          "date": "2026-01-12",
+          "text": "STREAM TONIGHT. WE GOING CRAZY.",
+          "url": "https://x.com/ishowspeed/status/1"
+        },
+        {
+          "platform": "other",
+          "date": "2026-01-10",
+          "text": "Clip: the reaction that chat won’t let me forget 😭",
+          "url": "https://example.com/speed-clip"
+        }
+      ]
+    },
+    "dream": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "youtube",
+          "date": "2026-01-15",
+          "text": "Minecraft Manhunt (New Rules) — one mistake and it's over",
+          "url": "https://www.youtube.com/watch?v=dream_latest"
+        },
+        {
+          "platform": "x",
+          "date": "2026-01-10",
+          "text": "Working on something fun. Missed this feeling.",
+          "url": "https://x.com/dream/status/1"
+        },
+        {
+          "platform": "other",
+          "date": "2026-01-06",
+          "text": "Community update: new server ideas + creator collabs.",
+          "url": "https://example.com/dream-update"
+        }
+      ]
+    },
+    "donald_trump": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "website",
+          "date": "2026-01-07",
+          "text": "Statement: focus on deals, jobs, and outcomes. Results matter.",
+          "url": "https://example.com/statement"
+        },
+        {
+          "platform": "x",
+          "date": "2026-01-05",
+          "text": "Business is about execution. Ideas are easy.",
+          "url": "https://x.com/donaldtrump/status/1"
+        }
+      ]
+    },
+    "joe_biden": {
+      "opinions": [],
+      "latestPosts": [
+        {
+          "platform": "x",
+          "date": "2026-01-09",
+          "text": "Here’s the thing: we’ve got to look out for each other. That’s how we move forward.",
+          "url": "https://x.com/joebiden/status/1"
+        },
+        {
+          "platform": "website",
+          "date": "2026-01-04",
+          "text": "Remarks: unity, dignity, and doing the work.",
+          "url": "https://example.com/remarks"
+        }
+      ]
+    }
+  }
+}
