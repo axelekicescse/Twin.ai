@@ -112,11 +112,7 @@ export default function ChatPage() {
         reader.readAsDataURL(blob)
       })
 
-    const downscaleImage = async (input: File) => {
-      // Keep this conservative: large phone photos can be huge.
-      const maxDim = 1024
-      const quality = 0.82
-
+    const downscaleImage = async (input: File, maxDim: number, quality: number) => {
       const objectUrl = URL.createObjectURL(input)
       try {
         const img = new Image()
@@ -156,34 +152,49 @@ export default function ChatPage() {
       }
     }
 
+    const compressToTarget = async (input: File) => {
+      const targetLen = 900_000
+      const attempts: Array<{ maxDim: number; quality: number }> = [
+        { maxDim: 1024, quality: 0.82 },
+        { maxDim: 768, quality: 0.75 },
+        { maxDim: 640, quality: 0.7 },
+        { maxDim: 512, quality: 0.65 },
+        { maxDim: 448, quality: 0.6 },
+        { maxDim: 384, quality: 0.58 },
+        { maxDim: 320, quality: 0.55 },
+        { maxDim: 256, quality: 0.5 },
+      ]
+
+      let last: string | null = null
+      for (const a of attempts) {
+        const { dataUrl } = await downscaleImage(input, a.maxDim, a.quality)
+        last = dataUrl
+        if (dataUrl && dataUrl.length <= targetLen) {
+          return dataUrl
+        }
+      }
+
+      // If we still couldn't hit target, return the smallest we could produce.
+      // Server will reject if it's too big; but in practice this should fit.
+      if (!last) throw new Error('Failed to compress image')
+      return last
+    }
+
     ;(async () => {
       try {
-        // Always try to downscale (best for mobile).
-        const { dataUrl } = await downscaleImage(file)
-
-        // Guardrail: reject extremely large payloads even after compression.
-        // ~2.5MB base64 string threshold (approx) to avoid huge requests.
-        if (dataUrl.length > 2_500_000) {
-          setTokenError('Image is too large. Please choose a smaller image or take a lower-resolution photo.')
+        const dataUrl = await compressToTarget(file)
+        if (dataUrl.length > 900_000) {
+          // Extremely unlikely after iterative compression, but keep a safe message.
+          setTokenError('Could not shrink this image enough. Please try another photo or screenshot.')
           setAttachedImage(null)
           return
         }
 
         setAttachedImage(dataUrl)
       } catch (err) {
-        console.warn('Image compression failed, falling back to original', err)
-        try {
-          const original = await readAsDataUrl(file)
-          if (original.length > 2_500_000) {
-            setTokenError('Image is too large. Please choose a smaller image or take a lower-resolution photo.')
-            setAttachedImage(null)
-            return
-          }
-          setAttachedImage(original)
-        } catch {
-          setTokenError('Could not attach image. Please try another photo.')
-          setAttachedImage(null)
-        }
+        console.warn('Image compression failed', err)
+        setTokenError('Could not attach this image. Please try a smaller photo or use a different format.')
+        setAttachedImage(null)
       }
     })()
   }

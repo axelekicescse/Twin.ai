@@ -111,6 +111,12 @@ export async function POST(req: NextRequest) {
       const text = typeof m?.content === 'string' ? m.content : ''
       const image = typeof m?.imageDataUrl === 'string' ? m.imageDataUrl : undefined
 
+      // Guardrail: very large base64 images can explode request size/cost.
+      // If this triggers, ask the client to downscale/compress.
+      if (role === 'user' && image && image.length > 900_000) {
+        throw Object.assign(new Error('IMAGE_TOO_LARGE'), { code: 'IMAGE_TOO_LARGE' })
+      }
+
       if (role === 'user' && image) {
         return {
           role: 'user',
@@ -140,6 +146,18 @@ export async function POST(req: NextRequest) {
       console.error('OpenAI API error:', openaiError)
       const errorMessage = openaiError?.message || 'OpenAI API error'
       const statusCode = openaiError?.status || 500
+
+      const lowered = String(errorMessage).toLowerCase()
+      if (statusCode === 429 || lowered.includes('insufficient_quota') || lowered.includes('quota')) {
+        return new Response(
+          JSON.stringify({
+            error: 'Chat error: quota exceeded. Please try again later or use a smaller image.',
+            details: process.env.NODE_ENV === 'development' ? errorMessage : undefined,
+          }),
+          { status: 429, headers: { 'Content-Type': 'application/json' } }
+        )
+      }
+
       return new Response(
         JSON.stringify({ 
           error: 'OpenAI API error',
@@ -177,6 +195,14 @@ export async function POST(req: NextRequest) {
     })
   } catch (error) {
     console.error('Chat API error:', error)
+    if ((error as any)?.code === 'IMAGE_TOO_LARGE') {
+      return new Response(
+        JSON.stringify({
+          error: 'Image is too large. Please choose a smaller image or take a lower-resolution photo.',
+        }),
+        { status: 413, headers: { 'Content-Type': 'application/json' } }
+      )
+    }
     const errorMessage = error instanceof Error ? error.message : 'Unknown error'
     return new Response(
       JSON.stringify({ 
